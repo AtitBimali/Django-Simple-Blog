@@ -36,7 +36,7 @@ pipeline {
                 script{
                 def projectFolder = '/var/www/html/app/'
                 dir(projectFolder) {
-                        sh 'gunicorn BlogPetProject.wsgi'
+                        sh 'gunicorn BlogPetProject.wsgi &'
                     }
                 }
             }
