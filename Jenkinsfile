@@ -17,13 +17,13 @@ pipeline {
 
         stage('Database Migration') {
             steps {
-                sh 'python manage.py migrate'
+                sh 'python3 manage.py migrate'
             }
         }
 
         stage('Collect Static Files') {
             steps {
-                sh 'python manage.py collectstatic --noinput'
+                sh 'python3 manage.py collectstatic --noinput'
             }
         }
 
