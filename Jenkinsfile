@@ -32,7 +32,7 @@ pipeline {
                 sh 'cp -r * /var/www/html/app/'
                 // sh 'systemctl restart gunicorn'
                 // sh 'systemctl restart nginx'
-                sh 'gunicorn BlogPetProject.wsgi:application'
+                sh 'gunicorn /var/www/html/app/BlogPetProject.wsgi:application'
             }
     }
     }
