@@ -35,6 +35,7 @@ pipeline {
                 sh 'gunicorn BlogPetProject.wsgi:application'
             }
     }
+    }
 
     post {
         always {
@@ -42,6 +43,5 @@ pipeline {
                 echo "Jenkins pipeline executed successfully!"
             }
         }
-    }
 }
 }
