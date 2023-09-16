@@ -29,10 +29,10 @@ pipeline {
 
         stage('Update Code on Azure VM') {
             steps {
-                sh 'cp -r * /var/www/html/app/'
+                sh 'sudo cp -r * /var/www/html/app/'
                 sh 'sudo systemctl restart gunicorn'
                 sh 'sudo systemctl restart nginx'
-                sh 'gunicorn BlogPetProject.wsgi:application'
+                sh 'sudo gunicorn BlogPetProject.wsgi:application'
             }
     }
     }
